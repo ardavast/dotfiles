@@ -15,7 +15,7 @@ pip install --user --upgrade virtualenv
 pip install --user --upgrade cryptography matplotlib numpy pandas pwntools \
                              pygame scapy scipy 
 pip3 install --user --upgrade cryptography matplotlib numpy pandas pwntools \
-                              pygame scapy scipy 
+                              pygame scapy-python3 scipy 
  
 # JDK
 sudo apt-add-repository -y ppa:webupd8team/java
