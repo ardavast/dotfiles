@@ -24,6 +24,7 @@ echo 'debconf shared/accepted-oracle-license-v1-1 select true' | sudo debconf-se
 sudo apt -y install oracle-java8-installer
  
 # Software
+echo 'debconf wireshark-common/install-setuid boolean true' | sudo debconf-set-selections
 sudo apt -y install build-essential cloc curl devscripts git gnuradio         \
                     gr-osmosdr htop libosmosdr-dev libosmosdr0 osmo-sdr       \
 		    powerline rpm rtl-sdr silversearcher-ag splint tcpreplay  \
