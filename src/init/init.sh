@@ -39,7 +39,7 @@ dotgit checkout
 
 # Oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh ardavast
 
 # Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
