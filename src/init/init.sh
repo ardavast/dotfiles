@@ -27,7 +27,7 @@ sudo apt -y install oracle-java8-installer
 echo 'debconf wireshark-common/install-setuid boolean true' | sudo debconf-set-selections
 sudo apt -y install build-essential cloc curl devscripts git gnuradio         \
                     gr-osmosdr htop libosmosdr-dev libosmosdr0 osmo-sdr       \
-		    powerline rpm rtl-sdr silversearcher-ag splint tcpreplay  \
+                    powerline rpm rtl-sdr silversearcher-ag splint tcpreplay  \
                     tmux vim wireshark xcape zsh
 
 # Dotfiles
