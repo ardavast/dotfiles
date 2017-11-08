@@ -32,10 +32,15 @@ sudo apt -y install build-essential cloc curl devscripts git gnuradio         \
 
 # Dotfiles
 # https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
+git clone --bare https://github.com/ardavast/dotfiles.git ~/src/dotfiles
 alias dotgit='/usr/bin/git --git-dir=$HOME/src/dotfiles --work-tree=$HOME'
-git clone --bare https://github.com/ardavast/dotfiles.git $HOME/src/dotfiles
 dotgit remote set-url origin git@github.com:ardavast/dotfiles.git
 dotgit checkout
+dotgit config --local status.showUntrackedFiles no
+dotgit update-index --assume-unchanged ~/README.md
+rm ~/README.md
+dotgit update-index --assume-unchanged ~/LICENSE
+rm ~/LICENSE
 
 # Oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
