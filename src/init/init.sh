@@ -1,12 +1,12 @@
 #!/bin/sh -ex
 sudo apt update
 sudo apt -y upgrade
- 
+
 # Chrome
 wget -P /tmp/ https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt -y install /tmp/google-chrome-stable_current_amd64.deb
 rm /tmp/google-chrome-stable_current_amd64.deb
- 
+
 # Python
 sudo apt -y install ipython ipython3
 sudo apt -y install python-pip python3-pip
@@ -16,13 +16,13 @@ pip install --user --upgrade cryptography matplotlib numpy pandas pwntools \
                              pygame scapy scipy 
 pip3 install --user --upgrade cryptography matplotlib numpy pandas pwntools \
                               pygame scapy-python3 scipy 
- 
+
 # JDK
 sudo apt-add-repository -y ppa:webupd8team/java
 sudo apt update
 echo 'debconf shared/accepted-oracle-license-v1-1 select true' | sudo debconf-set-selections
 sudo apt -y install oracle-java8-installer
- 
+
 # Software
 echo 'debconf wireshark-common/install-setuid boolean true' | sudo debconf-set-selections
 sudo apt -y install build-essential cloc curl devscripts git gnuradio         \
