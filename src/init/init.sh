@@ -8,6 +8,7 @@ sudo apt -y install /tmp/google-chrome-stable_current_amd64.deb
 rm /tmp/google-chrome-stable_current_amd64.deb
 
 # Python
+sudo apt -y install python3-tk
 sudo apt -y install ipython ipython3
 sudo apt -y install python-pip python3-pip
 pip install --upgrade pip
@@ -25,10 +26,10 @@ sudo apt -y install oracle-java8-installer
 
 # Software
 echo 'debconf wireshark-common/install-setuid boolean true' | sudo debconf-set-selections
-sudo apt -y install build-essential cloc curl devscripts git gnuradio         \
+sudo apt -y install build-essential cloc curl devscripts gcolor2 git gnuradio \
                     gr-osmosdr htop libosmosdr-dev libosmosdr0 osmo-sdr       \
                     powerline rpm rtl-sdr silversearcher-ag splint tcpreplay  \
-                    tmux vim wireshark xcape zsh
+                    tmux vim wireshark xcape yasm zsh
 
 # Dotfiles
 # https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
