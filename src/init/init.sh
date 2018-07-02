@@ -11,7 +11,12 @@ rm /tmp/google-chrome-stable_current_amd64.deb
 sudo apt -y install python3-tk
 sudo apt -y install ipython ipython3
 sudo apt -y install python-pip python3-pip
+
 pip install --upgrade pip
+sudo sed -i 's/from pip import main/from pip._internal import main/' /usr/bin/pip
+sudo sed -i 's/from pip import main/from pip._internal import main/' /usr/bin/pip2
+sudo sed -i 's/from pip import main/from pip._internal import main/' /usr/bin/pip3
+
 pip install --user --upgrade virtualenv
 pip install --user --upgrade cryptography matplotlib numpy pandas pwntools \
                              pygame scapy scipy 
